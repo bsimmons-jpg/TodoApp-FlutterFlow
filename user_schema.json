@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/user-schema.json",
+  "title": "User Document",
+  "type": "object",
+  "properties": {
+    "birthdate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Firestore timestamp as ISO 8601 string"
+    },
+    "created_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Firestore timestamp as ISO 8601 string"
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "photo_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "uid": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "birthdate",
+    "created_time",
+    "display_name",
+    "email",
+    "photo_url",
+    "uid"
+  ],
+  "additionalProperties": false
+}
